@@ -161,12 +161,12 @@ function moveDodgerLeft() {
    */
 
      function step() {
-       if (left > 0) {
-         dodger.style.left = `${left -= 4}px`
+       if (leftLeft > 0) {
+         dodger.style.left = `${leftLeft -= 4}px`
          window.requestAnimationFrame(step);
        }
      }
-     let left = positionToInteger(dodger.style.left);
+     let leftLeft = positionToInteger(dodger.style.left);
      window.requestAnimationFrame(step);
    }
 
@@ -179,12 +179,12 @@ function moveDodgerRight() {
    */
 
    function step() {
-     if (left < 360) {
-       dodger.style.left = `${left += 4}px`
+     if (rightLeft < 360) {
+       dodger.style.left = `${rightLeft += 4}px`
        window.requestAnimationFrame(step);
      }
    }
-   let left = positionToInteger(dodger.style.left);
+   let rightLeft = positionToInteger(dodger.style.left);
    window.requestAnimationFrame(step);
 
 }

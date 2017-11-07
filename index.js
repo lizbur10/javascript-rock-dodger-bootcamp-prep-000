@@ -142,10 +142,12 @@ function moveDodger(e) {
    */
 
      if (e.which === LEFT_ARROW) {
+       let direction = 'left';
        moveDodgerLeft();
        e.preventDefault();
        e.stopPropagation();
      } else if (e.which === RIGHT_ARROW) {
+       let direction = 'right';
        moveDodgerRight();
        e.preventDefault();
        e.stopPropagation();
@@ -160,7 +162,7 @@ function moveDodgerLeft() {
    */
 
      function step() {
-       if (left > 0) {
+       if (left > 0 && direction === 'left') {
          dodger.style.left = `${left -= 4}px`
          console.log(left);
          window.requestAnimationFrame(step);
@@ -179,7 +181,7 @@ function moveDodgerRight() {
    */
 
    function step() {
-     if (left < 360) {
+     if (left < 360 && direction = 'right') {
        dodger.style.left = `${left += 4}px`
        console.log(left);
        window.requestAnimationFrame(step);

@@ -142,12 +142,12 @@ function moveDodger(e) {
    */
 
      if (e.which === LEFT_ARROW) {
-       let direction = 'left';
+       var direction = 'left';
        moveDodgerLeft();
        e.preventDefault();
        e.stopPropagation();
      } else if (e.which === RIGHT_ARROW) {
-       let direction = 'right';
+       var direction = 'right';
        moveDodgerRight();
        e.preventDefault();
        e.stopPropagation();

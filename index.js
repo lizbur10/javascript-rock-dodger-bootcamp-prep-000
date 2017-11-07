@@ -11,6 +11,7 @@ const ROCKS = []
 const START = document.getElementById('start')
 
 var gameInterval = null
+var direction
 
 /**
  * Be aware of what's above this line,

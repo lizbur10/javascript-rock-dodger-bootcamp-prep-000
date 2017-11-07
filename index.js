@@ -143,12 +143,10 @@ function moveDodger(e) {
    */
 
      if (e.which === LEFT_ARROW) {
-       direction = 'left';
        moveDodgerLeft();
        e.preventDefault();
        e.stopPropagation();
      } else if (e.which === RIGHT_ARROW) {
-       direction = 'right';
        moveDodgerRight();
        e.preventDefault();
        e.stopPropagation();
@@ -170,6 +168,7 @@ function moveDodgerLeft() {
        }
      }
      let left = positionToInteger(dodger.style.left);
+     direction = 'left';
      window.requestAnimationFrame(step);
    }
 
@@ -189,6 +188,7 @@ function moveDodgerRight() {
      }
    }
    let left = positionToInteger(dodger.style.left);
+   direction = 'right';
    window.requestAnimationFrame(step);
 
 }
